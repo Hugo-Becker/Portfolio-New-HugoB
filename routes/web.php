@@ -34,10 +34,12 @@ Route::get(
     [HeroController::class, 'index']
 );
 
+// Route::name('eh')
+
 Route::post(
     '/updateHero',
     [HeroController::class, 'update']
-);
+)->name('uh');
 
 
 // HERO ICONS

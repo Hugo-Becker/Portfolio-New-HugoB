@@ -10,7 +10,7 @@
       <p class="typed-items" data-typed-person="Alex Smith">
 
         {{-- {{$hero[0]->para}} --}}
-        <form action="/updateHero" method="post">
+        <form action="{{route('uh')}}" method="post">
           @csrf
           @if ($errors->any()) 
             <div class="alert alert-danger"> 
