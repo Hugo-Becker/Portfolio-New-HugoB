@@ -3,7 +3,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>I'm <span class="typed"></span></h1>
-        <p class="typed-items" data-typed-person="Alex Smith">{{$hero[0]->para}}</p>
+        <p class="typed-items" style="@if($hero[0]->para)" data-typed-person="Alex Smith">{{$hero[0]->para}}</p>
 
         <ul class="list-unstyled list-social">
 
