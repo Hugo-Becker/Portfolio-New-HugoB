@@ -106,6 +106,8 @@ Route::post(
 Route::get('/editPorfolio',[PorfolioController::class,'index']);
 Route::get('/showPorfolio/{id}',[PorfolioController::class,'show']);
 Route::get('/addCard',[PorfolioController::class,'add']);
+Route::get('/download-image/{id}',[PorfolioController::class,'download']);
+
 
 
 Route::post('/updatePorfolio/{id}',[PorfolioController::class,'update']);

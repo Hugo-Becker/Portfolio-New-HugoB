@@ -31,7 +31,8 @@
 
         @foreach ($cardPorfolio as $c)
         <div class="col-lg-4 col-md-6 portfolio-item {{$c->filter}}">
-          <img src={{asset($c->src)}} class="img-fluid" alt="">
+          {{-- <img src={{asset($c->src)}} class="img-fluid" alt=""> --}}
+          <img src={{asset('storage/img/'.$c->src)}} class="img-fluid" alt="">
           <div class="portfolio-info">
             <h4>{{$c->h4}}</h4>
             <p>{{$c->p}}</p>

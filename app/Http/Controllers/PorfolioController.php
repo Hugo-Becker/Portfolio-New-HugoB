@@ -7,6 +7,7 @@ use App\Models\LiPorfolio;
 use App\Models\Porfolio;
 use Illuminate\Database\Console\Migrations\RefreshCommand;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PorfolioController extends Controller
 {
@@ -51,14 +52,26 @@ class PorfolioController extends Controller
     {
         $entry=new CardPorfolio();
 
+        Storage::put('public/img/', $request->file('src'));
+
         $entry->h4=$request->h4;
         $entry->p=$request->p;
         $entry->filter=$request->filter;
-        $entry->src=$request->src;
+        $entry->src=$request->file('src')->hashName();
 
         $entry->save();
 
         return redirect()->back();
+    }
+
+    public function download($id)
+    {
+
+        $download = CardPorfolio::find($id);
+
+
+        Return Storage::download('public/img/'.$download->src);
+        // Return Storage::download('public/'.($download->src));
     }
 
     /**

@@ -16,14 +16,14 @@ class CardPorfolioSeeder extends Seeder
     {
         DB::table('card_porfolios')->insert([
             [
-                "src"=>"assets/img/portfolio/portfolio-1.jpg",
+                "src"=>"portfolio-1.jpg",
                 "h4"=>"App 1",
                 "p"=>"App",
                 "filter"=>"filter-app"
 
             ],
             [
-                "src"=>"assets/img/portfolio/portfolio-2.jpg",
+                "src"=>"portfolio-2.jpg",
                 "h4"=>"Web 3",
                 "p"=>"Web",
                 "filter"=>"filter-web"
@@ -31,7 +31,7 @@ class CardPorfolioSeeder extends Seeder
 
             ],
             [
-                "src"=>"assets/img/portfolio/portfolio-3.jpg",
+                "src"=>"portfolio-3.jpg",
                 "h4"=>"App 2",
                 "p"=>"App",
                 "filter"=>"filter-app"
@@ -39,7 +39,7 @@ class CardPorfolioSeeder extends Seeder
 
             ],
             [
-                "src"=>"assets/img/portfolio/portfolio-4.jpg",
+                "src"=>"portfolio-4.jpg",
                 "h4"=>"Card 2",
                 "p"=>"Card",
                 "filter"=>"filter-card"
@@ -47,7 +47,7 @@ class CardPorfolioSeeder extends Seeder
 
             ],
             [
-                "src"=>"assets/img/portfolio/portfolio-5.jpg",
+                "src"=>"portfolio-5.jpg",
                 "h4"=>"Web 2",
                 "p"=>"Web",
                 "filter"=>"filter-web"
@@ -55,7 +55,7 @@ class CardPorfolioSeeder extends Seeder
 
             ],
             [
-                "src"=>"assets/img/portfolio/portfolio-6.jpg",
+                "src"=>"portfolio-6.jpg",
                 "h4"=>"App 3",
                 "p"=>"App",
                 "filter"=>"filter-app"

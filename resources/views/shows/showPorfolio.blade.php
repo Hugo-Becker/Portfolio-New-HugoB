@@ -11,7 +11,7 @@
 
           <h1 class="card-title"><i class="text-primary" > </i></h1>
           <p class="card-text">Paste or edit your icon link then your title and paragraph below</p>
-             <form action="/updatePorfolio/{{$show->id}}" method="POST">
+             <form action="/updatePorfolio/{{$show->id}}" enctype="multipart/form-data" method="POST">
                 @csrf
                 @if ($errors->any()) 
                   <div class="alert alert-danger"> 
@@ -36,10 +36,13 @@
 
                 <input name="filter" value="{{$show->filter}}" class="form-control" type="text">
 
-                <label for="">Img</label>
+                <label for="">New Img</label>
 
-                <input name="src" value="{{$show->src}}" class="form-control" type="text">
+                {{-- <input name="src" value="{{$show->src}}" class="form-control" type="text"> --}}
+                <input name="src"  class="form-control form-control-file" type="file"> 
+
                 <button type="submit" class="btn btn-primary">Update</button>
+
 
         
              </form>

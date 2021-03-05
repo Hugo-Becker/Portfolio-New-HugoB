@@ -11,7 +11,7 @@
 
           <h1 class="card-title"><i class="text-primary" > </i></h1>
           <p class="card-text">Paste or edit your icon link then your title and paragraph below</p>
-             <form action="/storePorfolio" method="POST">
+             <form action="/storePorfolio" enctype="multipart/form-data" method="POST">
                 @csrf
 
                 <br>
@@ -29,8 +29,10 @@
 
                 <label for="">Img</label>
 
-                <input name="src"  class="form-control" type="text">
-                <button type="submit" class="btn btn-primary">Update</button>
+                {{-- <input name="src"  class="form-control" type="text"> --}}
+                <input name="src"  class="form-control form-control-file  " type="file">
+
+                <button type="submit" class="btn btn-primary">Add</button>
 
         
              </form>
